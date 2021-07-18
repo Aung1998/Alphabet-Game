@@ -1,0 +1,22 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.game{
+    border: 1px solid black;
+    width: 900px;
+    height: 600px;
+}
+
+#game{
+    display:grid;
+    grid-template-rows: 5% 90% 5%;
+}
+
+.score-and-timer{
+    display:flex;
+    justify-content:space-between;
+    margin: 8px;
+}
