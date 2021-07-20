@@ -1,6 +1,9 @@
+// Helper varibles
+const alphabet = "abcdefghijklmnopqrstuvwxyz"; //Alphabet string which contain all alphabet in order
+let time = 10;
+
 // Access DOM elements
 
-let time = 10;
 const timerDisplay = document.querySelector("[data-timer]");
 timerDisplay.innerHTML = time; // shows initial time
 
@@ -16,4 +19,10 @@ function displayTimer() {
             time--;
         }
     }    
+}
+
+// Function to check if character pick is in the right alphabet order
+
+function checkAlphabet(str){
+    return str[0] == 'a' && alphabet.includes(str);
 }
