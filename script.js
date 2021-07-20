@@ -33,7 +33,7 @@ let score = 0;
 let health = 10;
 
 // grab dom element for score and health
-let dom_score = document.querySelector("elementOfScore")
+let dom_score = document.querySelector("[data-score]")
 let dom_helaht = document.querySelector("elementofHealth")
 
 //  functon update helath and score
