@@ -20,3 +20,176 @@ body{
     justify-content:space-between;
     margin: 8px;
 }
+
+.playground{
+    display: block;
+}
+
+.alphabet-box{
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+}
+
+.alphabet-btn{
+    width: 100%;
+    height: 100%;
+}
+
+.box-a{
+    position:relative;
+    left: 639px;
+    bottom: -300px;
+}
+
+.box-b{
+    position:relative;
+    left: 0px;
+    bottom: -300px;
+}
+
+.box-c{
+    position:relative;
+    left: 405px;
+    bottom: 95px;
+} 
+
+.box-d{
+    position:relative;
+    left: 150px;
+    top: -140px;
+}
+
+.box-e{
+    position:relative;
+    left: 0px;
+    top: -340px;
+}
+
+.box-f{
+    position:relative;
+    left: 716px;
+    bottom: 120px;
+}
+
+.box-g{
+    position:relative;
+    left: 520px;
+    bottom: 520px;
+}
+
+.box-h{
+    position:relative;
+    left: 420px;
+    bottom: 520px;
+}
+
+.box-i{
+    position:relative;
+    left: 110px;
+    bottom: 820px;
+}
+
+.box-j{
+    position:relative;
+    left: 10px;
+    bottom: 770px;
+}
+
+.box-k{
+    position:relative;
+    left: 530px;
+    bottom: 820px;
+}
+
+.box-l{
+    position:relative;
+    left: 298px;
+    bottom: 1100px;
+}
+
+.box-m{
+    position:relative;
+    left: 500px;
+    bottom: 930px;
+}
+
+.box-n{
+    position:relative;
+    left: 630px;
+    bottom: 1350px;
+}
+
+.box-o{
+    position:relative;
+    left: 300px;
+    bottom: 1300px;
+}
+
+.box-p{
+    position: relative;
+    left: 680px;
+    bottom: 1450px;
+}
+
+.box-q{
+    position: relative;
+    left: 288px;
+    bottom: 1406px;
+}
+
+.box-r{
+    position:relative;
+    left: 45px;
+    bottom: 1532px;
+}
+
+.box-s{
+    position:relative;
+    left: 395px;
+    bottom: 1604px;
+}
+
+.box-t{
+    position:relative;
+    left: 743px;
+    bottom: 1990px;
+}
+
+.box-u{
+    position:relative;
+    left: 230px;
+    bottom: 1733px;
+
+}
+
+.box-v{
+    position:relative;
+    left: 607px;
+    bottom: 1843px;
+}
+
+.box-w{
+    position:relative;
+    left: 515px;
+    bottom: 2359px;
+}
+
+.box-x{
+    position:relative;
+    left: 170px;
+    bottom: 2183px;
+}
+
+.box-y{
+    position:relative;
+    left: 752px;
+    bottom: 2300px;
+}
+
+.box-z{
+    position:relative;
+    left: 117px;
+    bottom: 2269px;
+}
+
