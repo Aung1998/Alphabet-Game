@@ -14,9 +14,9 @@ buttons.forEach(button => {
         if (button.dataset.alphabet == "a") {   // timer begins when user presses "a"
             displayTimer(60);
         };
-        updateStat(letterString);
-        console.log(letterArray);
-        console.log(letterString);
+        if (updateStat(letterString)){
+            button.disabled = true; // disable button if alphabet is picked in order.
+        };
     });
 });
 
@@ -29,7 +29,7 @@ function displayTimer(usertime) {
     function countDown() {
         if (usertime == 0) {
             clearInterval(ticker); // stops the setInterval method
-            console.log("time's up!");
+            buttons.forEach(button => button.disabled = true); //disable all buttons after timer up
         } else {
             timerDisplay.innerHTML = usertime - 1; // -1 counteracts the one second delay at start
             usertime--;
@@ -61,7 +61,7 @@ function updateStat(str) {
         health--;
         // dom_helaht.textContent = health; // update health on dom
         letterArray.pop(); // removes last element from array
-        console.log(letterArray);
-        console.log("oh no, health is", health);
+        return false;
     }
+    return true;
 };
