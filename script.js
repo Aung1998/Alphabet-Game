@@ -1,10 +1,17 @@
 // Helper varibles
 const alphabet = "abcdefghijklmnopqrstuvwxyz"; //Alphabet string which contain all alphabet in order
 
-const buttonNodes = document.querySelectorAll(".alphabet-btn");
-const buttons = Array.from(buttonNodes);
 let letterArray = [];
 let letterString = "";
+
+let score = 0;
+let health = 10;
+
+//DOM Element
+const buttonNodes = document.querySelectorAll(".alphabet-btn");
+const buttons = Array.from(buttonNodes);
+let dom_score = document.querySelector("[data-score]")
+let dom_helaht = document.querySelector("elementofHealth")
 
 // Event listeners
 buttons.forEach(button => {
@@ -42,15 +49,6 @@ function displayTimer(usertime) {
 function checkAlphabet(str){
     return str[0] == 'a' && alphabet.includes(str);
 }
-
-
-// global var to score score and health
-let score = 0;
-let health = 10;
-
-// grab dom element for score and health
-let dom_score = document.querySelector("[data-score]")
-let dom_helaht = document.querySelector("elementofHealth")
 
 //  functon update helath and score
 function updateStat(str) {
