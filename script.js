@@ -10,8 +10,8 @@ let health = 10;
 //DOM Element
 const buttonNodes = document.querySelectorAll(".alphabet-btn");
 const buttons = Array.from(buttonNodes);
-let dom_score = document.querySelector("[data-score]")
-let dom_helaht = document.querySelector("elementofHealth")
+let dom_score = document.querySelector("[data-score]");
+let dom_health = document.getElementById("health");
 
 // Event listeners
 buttons.forEach(button => {
@@ -34,7 +34,7 @@ function displayTimer(usertime) {
     timerDisplay.innerHTML = usertime; // shows initial time
     let ticker = setInterval(countDown, 1000); // counts one second then calls function
     function countDown() {
-        if (usertime == 0) {
+        if (usertime == 0 || health == 0) {
             clearInterval(ticker); // stops the setInterval method
             buttons.forEach(button => button.disabled = true); //disable all buttons after timer up
         } else {
@@ -57,7 +57,7 @@ function updateStat(str) {
         dom_score.textContent = score; // update score on dom
     }else { // wrong answer
         health--;
-        // dom_helaht.textContent = health; // update health on dom
+        dom_health.value = health; // update health on dom
         letterArray.pop(); // removes last element from array
         return false;
     }
