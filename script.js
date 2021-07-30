@@ -1,5 +1,6 @@
 // Helper varibles
 const alphabet = "abcdefghijklmnopqrstuvwxyz"; //Alphabet string which contain all alphabet in order
+let gameStart = false;
 
 let letterArray = [];
 let letterString = "";
@@ -20,6 +21,7 @@ buttons.forEach(button => {
         letterString = letterArray.join(""); // builds string to compare with checkAlphabet
         if (button.dataset.alphabet == "a") {   // timer begins when user presses "a"
             displayTimer(60);
+            gameStart = true;
         };
         if (updateStat(letterString)){
             button.disabled = true; // disable button if alphabet is picked in order.
@@ -50,12 +52,16 @@ function checkAlphabet(str){
     return str[0] == 'a' && alphabet.includes(str);
 }
 
+
 //  functon update helath and score
 function updateStat(str) {
     if (checkAlphabet(str)) { // right answer
         score++;
         dom_score.textContent = score; // update score on dom
     }else { // wrong answer
+        if (gameStart == false) {
+            health = 10;
+        } else
         health--;
         dom_health.value = health; // update health on dom
         letterArray.pop(); // removes last element from array
