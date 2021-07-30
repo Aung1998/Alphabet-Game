@@ -209,10 +209,6 @@ body{
     color: green;
 }
   
-#health::-webkit-progress-value {
-    background: green;
-}
-  
 #health::-moz-progress-bar {
     background: green;
 }
@@ -222,5 +218,5 @@ body{
 }
   
 #health::-webkit-progress-bar {
-    background: green;
+    background: red;
 }
