@@ -6,7 +6,7 @@ let letterArray = [];
 let letterString = "";
 
 let score = 0;
-let health = 10;
+let health = 5;
 
 //DOM Element
 const buttonNodes = document.querySelectorAll(".alphabet-btn");
@@ -36,7 +36,7 @@ function displayTimer(usertime) {
     timerDisplay.innerHTML = usertime; // shows initial time
     let ticker = setInterval(countDown, 1000); // counts one second then calls function
     function countDown() {
-        if (usertime == 0 || health < 2 || score == 26) {
+        if (usertime == 0 || health < 1 || score == 26) {
             clearInterval(ticker); // stops the setInterval method
             buttons.forEach(button => button.disabled = true); //disable all buttons after timer up
         } else {
