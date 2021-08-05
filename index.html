@@ -5,7 +5,7 @@
         <link type="text/css" rel="stylesheet" href="styles/style.css" />
     </head>
     <body>
-        <main id="game" class="game">
+        <div id="game" class="game">
             <div class="score-and-timer">
                 <div data-score>0</div>
                 <div data-timer>---</div>
@@ -39,7 +39,8 @@
                 <div class="alphabet-box box-z"><button class="alphabet-btn" data-alphabet = "z">Z</button></div>
             </div>
             <div id = "health-bar"><progress id="health" value="5" max="5"></progress></div>
-        </main>
+        </div>
+        <div id="footer"><button id="restart-btn" onclick="restart()">Restart</button></div>
         <script src="script.js"></script>
     </body>
 </html>

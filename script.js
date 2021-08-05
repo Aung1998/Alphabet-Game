@@ -8,6 +8,8 @@ let letterString = "";
 let score = 0;
 let health = 5;
 
+let newGame = true;
+
 //DOM Element
 const buttonNodes = document.querySelectorAll(".alphabet-btn");
 const buttons = Array.from(buttonNodes);
@@ -21,6 +23,7 @@ buttons.forEach(button => {
         letterString = letterArray.join(""); // builds string to compare with checkAlphabet
         if (button.dataset.alphabet == "a") {   // timer begins when user presses "a"
             displayTimer(60);
+            newGame = false;
             gameStart = true;
         };
         if (updateStat(letterString)){
@@ -42,6 +45,9 @@ function displayTimer(usertime) {
         } else {
             timerDisplay.innerHTML = usertime - 1; // -1 counteracts the one second delay at start
             usertime--;
+        }
+        if(newGame){
+            clearInterval(ticker);
         }
     }    
 }
@@ -69,3 +75,14 @@ function updateStat(str) {
     }
     return true;
 };
+
+function restart(){
+     gameStart = false;
+     letterArray = [];
+     letterString = "";
+     score = 0;
+     health = 5;
+     dom_health.value = 5
+     buttons.forEach(button => button.disabled = false);
+     newGame = true;
+}
